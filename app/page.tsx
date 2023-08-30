@@ -1,11 +1,12 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import CardTitle from "@/components/Card/CardTitle";
+"use client"
+
+import React from "react";
+import {Link} from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <CardTitle />
-    </main>
+    <div>
+        <Link href={"/card"} fontSize={"lg"} textDecoration={"underline"}>Card</Link>
+    </div>
   );
 }

@@ -3,15 +3,17 @@
 import { ForwardedRef, forwardRef } from "react";
 import { chakra } from "@chakra-ui/react";
 
-interface CardTitleProps {}
+interface CardTitleProps {
+    title: string;
+}
 
 const CardTitle = (
-  {}: CardTitleProps,
+  {title}: CardTitleProps,
   ref: ForwardedRef<HTMLParagraphElement>
 ) => {
   return (
-    <chakra.p color={"#040404"} fontSize={"2rem"} fontWeight={"normal"}>
-      여기는 타이틀영역 입니다
+    <chakra.p color={"#040404"} fontSize={"2xl"} fontWeight={"700"} ref={ref} fontFamily={"pretendard"}>
+        {title}
     </chakra.p>
   );
 };
