@@ -1,17 +1,20 @@
-"use client"
+"use client";
 
 import CardTitle from "@/components/Card/CardTitle";
 import React from "react";
-import {CardType} from "@/types/CardType";
+import { CardType } from "@/types/CardType";
+import CardText from "@/components/Card/CardText";
 
 export default function CardPage() {
-    const data: CardType = {
-        title: "여기는 타이틀영역 입니다"
-    };
+  const data: CardType = {
+    title: "여기는 타이틀영역 입니다",
+    text: "여기는 게시글 내용이 4줄 보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.여기는 게시글 내용이 4줄보여지는 영역입니다.",
+  };
 
-    return (
-        <div>
-            <CardTitle title={data.title} />
-        </div>
-    );
+  return (
+    <div>
+      <CardTitle title={data.title} />
+      <CardText text={data.text} />
+    </div>
+  );
 }
