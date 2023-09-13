@@ -1,11 +1,16 @@
 import {
   Card,
   CardBody,
+  CardBodyTop,
+  CardContent,
   CardImage,
   CardMoreButton,
   CardTag,
+  CardTagWrap,
+  CardTitle,
 } from "@/components/Card/Card";
 import { HiOutlinePlusSm } from "react-icons/hi";
+import React from "react";
 
 export default function Home() {
   const tags: string[] = [
@@ -19,52 +24,21 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ padding: "10px" }}>
-      <h1>메인 페이지</h1>
+    <div style={{ padding: "10px", width: "100%" }}>
       <Card>
         <CardImage />
         <CardBody>
-          <CardTag>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                alignContent: "center",
-                gap: "15px",
-                flex: "1 0 0",
-                flexWrap: "wrap",
-              }}
-            >
+          <CardBodyTop>
+            <CardTagWrap>
               {tags.map((item: string, index: number) => {
-                return (
-                  <span
-                    style={{
-                      color: "#00C7AF",
-                      fontSize: "18px",
-                      fontWeight: "400",
-                    }}
-                    key={index}
-                  >
-                    #{item}
-                  </span>
-                );
+                return <CardTag key={index}>#{item}</CardTag>;
               })}
-            </div>
-            <CardMoreButton>
-              <HiOutlinePlusSm size={24} color={"white"} />
-              <span
-                style={{
-                  color: "#FFFFFF",
-                  fontSize: "16px",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  lineHeight: "normal",
-                }}
-              >
-                More
-              </span>
-            </CardMoreButton>
-          </CardTag>
+            </CardTagWrap>
+            <CardMoreButton />
+          </CardBodyTop>
+          <CardContent>
+            <CardTitle>여기는 타이틀영역 입니다.</CardTitle>
+          </CardContent>
         </CardBody>
       </Card>
     </div>
