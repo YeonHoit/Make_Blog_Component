@@ -12,6 +12,16 @@ import {
 } from "@/components/Card/Card";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import React from "react";
+import {
+  Paging,
+  PagingFirstButton,
+  PagingLastButton,
+  PagingNextButton,
+  PagingNumberButton,
+  PagingNumberText,
+  PagingNumberWrap,
+  PagingPrevButton,
+} from "@/components/Paging/Paging";
 
 export default function Home() {
   const tags: string[] = [
@@ -55,6 +65,31 @@ export default function Home() {
           </CardContent>
         </CardBody>
       </Card>
+      {/* 구분선 */}
+      <span style={{ height: "30px", width: "100%", display: "block" }}></span>
+      <Paging>
+        <PagingFirstButton />
+        <PagingPrevButton />
+        <PagingNumberWrap>
+          <PagingNumberButton>
+            <PagingNumberText>1</PagingNumberText>
+          </PagingNumberButton>
+          <PagingNumberButton>
+            <PagingNumberText>2</PagingNumberText>
+          </PagingNumberButton>
+          <PagingNumberButton>
+            <PagingNumberText>3</PagingNumberText>
+          </PagingNumberButton>
+          <PagingNumberButton>
+            <PagingNumberText>4</PagingNumberText>
+          </PagingNumberButton>
+          <PagingNumberButton>
+            <PagingNumberText>5</PagingNumberText>
+          </PagingNumberButton>
+          <PagingNextButton />
+          <PagingLastButton />
+        </PagingNumberWrap>
+      </Paging>
     </div>
   );
 }
