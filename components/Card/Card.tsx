@@ -88,6 +88,16 @@ const CardTitle = forwardRef<
 ));
 CardTitle.displayName = "CardTitle";
 
+const CardText = forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <div className={Style.card_text_wrap}>
+    <p ref={ref} className={Style.card_text} {...props} />
+  </div>
+));
+CardText.displayName = "CardText";
+
 export {
   Card,
   CardImage,
@@ -98,4 +108,5 @@ export {
   CardMoreButton,
   CardContent,
   CardTitle,
+  CardText,
 };

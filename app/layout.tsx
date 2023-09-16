@@ -16,10 +16,8 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Providers>
-            <Font />
-            <div style={{padding: "10px"}}>
-                {children}
-            </div>
+          <Font />
+          <div>{children}</div>
         </Providers>
       </body>
     </html>

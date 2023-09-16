@@ -7,6 +7,7 @@ import {
   CardMoreButton,
   CardTag,
   CardTagWrap,
+  CardText,
   CardTitle,
 } from "@/components/Card/Card";
 import { HiOutlinePlusSm } from "react-icons/hi";
@@ -24,7 +25,7 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ padding: "10px", width: "100%" }}>
+    <div style={{ padding: "10px", width: "100vw" }}>
       <Card>
         <CardImage />
         <CardBody>
@@ -38,6 +39,19 @@ export default function Home() {
           </CardBodyTop>
           <CardContent>
             <CardTitle>여기는 타이틀영역 입니다.</CardTitle>
+            <CardText>
+              여기는 게시글 내용이 4줄 보여지는 영역입니다.여기는 게시글 내용이
+              4줄 보여지는 영역입니다.여기는 게시글 내용이 4줄 보여지는
+              영역입니다.여기는 게시글 내용이 4줄 보여지는 영역입니다.여기는
+              게시글 내용이 4줄 보여지는 영역입니다.여기는 게시글 내용이 4줄
+              보여지는 영역입니다.여기는 게시글 내용이 4줄 보여지는
+              영역입니다.여기는 게시글 내용이 4줄 보여지는 영역입니다.여기는
+              게시글 내용이 4줄 보여지는 영역입니다.여기는 게시글 내용이 4줄
+              보여지는 영역입니다.여기는 게시글 내용이 4줄 보여지는
+              영역입니다.여기는 게시글 내용이 4줄 보여지는 영역입니다.여기는
+              게시글 내용이 4줄 보여지는 영역입니다.여기는 게시글 내용이 4줄
+              보여지는 영역입니다.
+            </CardText>
           </CardContent>
         </CardBody>
       </Card>
