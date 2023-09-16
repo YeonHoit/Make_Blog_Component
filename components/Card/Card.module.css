@@ -44,6 +44,9 @@
     border-radius: 20px;
     background: #A384FE;
 }
+.card_more_button:hover {
+    background: #4200FF;
+}
 .card_more_button span {
     color: #FFFFFF;
     font-size: 16px;
@@ -66,7 +69,6 @@
     align-items: center;
 }
 .card_title {
-    width: 100%;
     color: #040404;
     font-size: 32px;
     font-style: normal;
@@ -76,6 +78,12 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    cursor: pointer;
+}
+.card_title:hover {
+    color: #4200FF;
+    font-size: 34px;
+    letter-spacing: -0.4px;
 }
 .card_text_wrap {
     display: flex;

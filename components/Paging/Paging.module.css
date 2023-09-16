@@ -40,6 +40,17 @@
     font-weight: 400;
     line-height: normal;
 }
+.paging_number:hover p {
+    color: #4200FF;
+    text-decoration-line: underline;
+}
+.paging_number_active {
+    border: 2px solid #4200FF;
+}
+.paging_number_active p {
+    color: #4200FF;
+    font-weight: 700;
+}
 .paging_next_icon {
     width: 24px;
     height: 24px;

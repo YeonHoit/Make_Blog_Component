@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef } from "react";
+import React, { ForwardedRef, forwardRef, HTMLProps } from "react";
 import Style from "./Paging.module.css";
 import {
   HiOutlineChevronDoubleLeft,
@@ -44,12 +44,37 @@ const PagingNumberWrap = forwardRef<
 ));
 PagingNumberWrap.displayName = "PagingNumberWrap";
 
-const PagingNumberButton = forwardRef<
-  HTMLButtonElement,
-  React.HTMLAttributes<HTMLButtonElement>
->(({ className, ...props }, ref) => (
-  <button ref={ref} className={Style.paging_number} {...props} />
-));
+// const PagingNumberButton = forwardRef<
+//   HTMLButtonElement,
+//   React.HTMLAttributes<HTMLButtonElement>
+// >(({ className, ...props }, ref) => (
+//   <button ref={ref} className={Style.paging_number} {...props} />
+// ));
+// PagingNumberButton.displayName = "PagingNumberButton";
+
+const PagingNumberButton = forwardRef(
+  (
+    {
+      active,
+      className,
+      ...props
+    }: { active?: boolean } & HTMLProps<HTMLButtonElement>,
+    ref: ForwardedRef<HTMLButtonElement>,
+  ) => {
+    return (
+      <>
+        {/* @ts-ignore */}
+        <button
+          className={`${Style.paging_number} ${
+            active ? Style.paging_number_active : ""
+          }`}
+          ref={ref}
+          {...props}
+        />
+      </>
+    );
+  },
+);
 PagingNumberButton.displayName = "PagingNumberButton";
 
 const PagingNumberText = forwardRef<

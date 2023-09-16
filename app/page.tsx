@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardBody,
@@ -11,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/Card/Card";
 import { HiOutlinePlusSm } from "react-icons/hi";
-import React from "react";
+import React, { useRef } from "react";
 import {
   Paging,
   PagingFirstButton,
@@ -71,7 +73,7 @@ export default function Home() {
         <PagingFirstButton />
         <PagingPrevButton />
         <PagingNumberWrap>
-          <PagingNumberButton>
+          <PagingNumberButton active={true}>
             <PagingNumberText>1</PagingNumberText>
           </PagingNumberButton>
           <PagingNumberButton>
